@@ -7,7 +7,7 @@ import resize from '../utilities/resize';
 const request = supertest(app);
 
 const falsePath = 'src/images/full/false.jpg';
-const truePath = 'src/images/full/hello-world.jpg';
+const truePath = 'src/images/full/HCM.jpg';
 
 describe('Utilities test', () => {
   it('1. Should return false if image not existed', () => {
@@ -43,9 +43,7 @@ describe('Endpoint response test', () => {
 
 describe('Image Processing Test', () => {
   it('7. Resize function should return thumb file if the image is existed ', async () => {
-    const filePath_Thumb = path.resolve(
-      `src/images/thumb/hello-world-200-200.jpg`,
-    );
-    expect(await resize('hello-world', 200, 200)).toEqual(filePath_Thumb);
+    const filePath_Thumb = path.resolve(`src/images/thumb/HCM-200-200.jpg`);
+    expect(await resize('HCM', 200, 200)).toEqual(filePath_Thumb);
   });
 });

@@ -19,7 +19,7 @@ const path_1 = __importDefault(require("path"));
 const resize_1 = __importDefault(require("../utilities/resize"));
 const request = (0, supertest_1.default)(__1.default);
 const falsePath = 'src/images/full/false.jpg';
-const truePath = 'src/images/full/hello-world.jpg';
+const truePath = 'src/images/full/HCM.jpg';
 describe('Utilities test', () => {
     it('1. Should return false if image not existed', () => {
         expect((0, findFile_1.checkFileExist)(falsePath)).toEqual(false);
@@ -48,7 +48,7 @@ describe('Endpoint response test', () => {
 });
 describe('Image Processing Test', () => {
     it('7. Resize function should return thumb file if the image is existed ', () => __awaiter(void 0, void 0, void 0, function* () {
-        const filePath_Thumb = path_1.default.resolve(`src/images/thumb/hello-world-200-200.jpg`);
-        expect(yield (0, resize_1.default)('hello-world', 200, 200)).toEqual(filePath_Thumb);
+        const filePath_Thumb = path_1.default.resolve(`src/images/thumb/HCM-200-200.jpg`);
+        expect(yield (0, resize_1.default)('HCM', 200, 200)).toEqual(filePath_Thumb);
     }));
 });
